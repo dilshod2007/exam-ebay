@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import "../navbar/Nav.css"
+
 import gh from "../../assets/gh.png"
 import shop from "../../assets/shop.png"
 import abay from "../../assets/abay.png"
 import { useTranslation } from 'react-i18next'
+import "../navbar/nav.css"
 const Nav = () => {
     const { t, i18n } = useTranslation()
     const onChange = (value) => {

@@ -29,25 +29,25 @@ const Login = () => {
      try {
        const response = await axios.post("/auth/login", { username, password });
        if (response.status === 200) {
-         alert ("User registered successfully 🙂");
+        //  alert ("User registered successfully 🙂");
          
        
          navigate("/");
  
-        //  Toastify({
-        //    text: "Logged in successfully!!!",
-        //    duration: 3000,
-        //    destination: "https://github.com/apvarun/toastify-js",
-        //    newWindow: true,
-        //    close: true,
-        //    gravity: "top", 
-        //    position: "left", 
-        //    stopOnFocus: true, 
-        //    style: {
-        //      background: "linear-gradient(to right, #00b09b, #96c93d)",
-        //    },
-        //    onClick: function(){} 
-        //  }).showToast();
+        Toastify({
+          text: "User registered sucssesufully",
+          duration: 3000,
+          destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top", // top or bottom
+          position: "left", // left, center or right
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
  
  
        }
@@ -78,7 +78,7 @@ const Login = () => {
    </div>
      <div className='login-container'>
       
-      <div className='login-form'>
+      <div className='login-form shadow-md'>
       <div className='text'>
         <h1 className='text-black text-[40px] ml-[140px]'>{t('navv')}</h1>
        
